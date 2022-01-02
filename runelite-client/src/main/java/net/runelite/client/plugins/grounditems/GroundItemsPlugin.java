@@ -252,7 +252,7 @@ public class GroundItemsPlugin extends Plugin
 			collectedGroundItems.put(tile.getWorldLocation(), item.getId(), groundItem);
 		}
 
-		if (!config.onlyShowLoot())
+		if ((!config.onlyShowLoot()) || (config.onlyShowLoot() && config.onlyShowLootExcludeWorldSpawns()))
 		{
 			notifyHighlightedItem(groundItem);
 		}
